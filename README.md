@@ -4,7 +4,7 @@ This repository contains examples of the Gray-Scott model in various programming
 
 ## Governing equations
 
-The Gray-Scott model represents the following irreversible reactions where *P* is an inert product:
+The Gray-Scott model represents the following irreversible reactions where $P$ is an inert product:
 
 ```math
 \begin{align}
@@ -13,7 +13,7 @@ The Gray-Scott model represents the following irreversible reactions where *P* i
 \end{align}
 ```
 
-The resulting reaction-diffusion equations in dimensionless units are shown below where *k* is the dimensionless rate constant of the second reaction and *F* is the dimensionless feed rate. The diffusion coefficients are *D<sub>u</sub>* and *D<sub>v</sub>* and *∇<sup>2</sup>* represents the Laplacian operator.
+The resulting reaction-diffusion equations in dimensionless units are shown below where $k$ is the dimensionless rate constant of the second reaction and $F$ is the dimensionless feed rate. The diffusion coefficients are $D_u$ and $D_v$ and $\nabla^2$ represents the Laplacian operator.
 
 ```math
 \begin{align}
