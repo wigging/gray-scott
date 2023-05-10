@@ -26,11 +26,9 @@ The resulting reaction-diffusion equations in dimensionless units are shown belo
 
 Examples of solving the Gray-Scott model are provided for the following programming languages:
 
-- [x] Python - `python-examples`
-- [ ] Swift - coming soon
-- [ ] JavaScript
-- [ ] C++
-- [ ] Julia
+- Python
+- Swift (in progress)
+- Julia (in progress)
 
 **python-examples** - These Python examples use NumPy or SciPy to solve the Gray-Scott model. A five-point stencil is used to approximate the Laplacian. Results are plotted with the Matplotlib package. See the comments in the code files for more information. The examples use model parameters and boundary conditions defined in the Pearson 1993 article.
 
