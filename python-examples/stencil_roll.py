@@ -40,7 +40,6 @@ def lap5(f, h2):
 
 # Laplacian of the grid
 h = grid[0, 1] - grid[0, 0]
-# h = 2 / (n - 1)
 h2 = h * h
 laplacian = lap5(grid, h2)
 print('laplacian\n', laplacian)
