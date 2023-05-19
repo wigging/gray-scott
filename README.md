@@ -28,9 +28,9 @@ Examples of solving the Gray-Scott model are provided for the following programm
 
 - Python
 - Swift (in progress)
-- Julia (in progress)
+- Julia
 
-**python-examples** - These Python examples use NumPy or SciPy to solve the Gray-Scott model. A five-point stencil is used to approximate the Laplacian. Results are plotted with the Matplotlib package. See the comments in the code files for more information. The examples use model parameters and boundary conditions defined in the Pearson 1993 article.
+See the comments in the examples for more information. The examples use model parameters and boundary conditions defined in the Pearson 1993 article.
 
 ## Contributing
 
