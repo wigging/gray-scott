@@ -5,6 +5,8 @@
 //  Created by Gavin Wiggins on 5/27/23.
 //
 
+import Foundation
+
 func laplace(f: inout Matrix, h2: Float) -> Matrix {
     let n = 22
     for i in 1..<n-1 {
@@ -69,6 +71,8 @@ func main() {
             V[k, nn-1] = V[k, 1]
         }
     }
+    
+    print(U)
 }
 
 main()
