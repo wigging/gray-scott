@@ -1,10 +1,18 @@
 """
 Examples of calculating the Laplacian in two dimensions using periodic
 boundary conditions.
+
+Elapsed time results for n=512 are given below for three runs.
+lap5_loops            | 0.5555 s | 0.5794 s | 0.5660 s
+lap5_loops2           | 0.5516 s | 0.5396 s | 0.5209 s
+lap5_slices           | 0.0045 s | 0.0039 s | 0.0034 s
+lap5_roll             | 0.0064 s | 0.0056 s | 0.0051 s
+scipy.ndimage.laplace | 0.0737 s | 0.0693 s | 0.0659 s
 """
 
 import numpy as np
 import scipy as sp
+import time
 
 
 def lap5_loops(f, h2):
@@ -101,11 +109,31 @@ def main():
     h2 = h * h
 
     print('grid\n', grid)
-    print('\nlap5_loops\n', lap5_loops(grid, h2))
-    print('\nlap5_loops2\n', lap5_loops2(grid, h2))
-    print('\nlap5_slices\n', lap5_slices(grid, h2))
-    print('\nlap5_roll\n', lap5_roll(grid, h2))
-    print('\nscipy.ndimage.laplace\n', sp.ndimage.laplace(grid, mode='wrap'))
+
+    tic = time.perf_counter()
+    result = lap5_loops(grid, h2)
+    toc = time.perf_counter()
+    print(f'\nlap5_loops\nelapsed time {toc - tic:.4f} s\n', result)
+
+    tic2 = time.perf_counter()
+    result2 = lap5_loops2(grid, h2)
+    toc2 = time.perf_counter()
+    print(f'\nlap5_loops2\nelapsed time {toc2 - tic2:.4f} s\n', result2)
+
+    tic3 = time.perf_counter()
+    result3 = lap5_slices(grid, h2)
+    toc3 = time.perf_counter()
+    print(f'\nlap5_slices\nelapsed time {toc3 - tic3:.4f} s\n', result3)
+
+    tic4 = time.perf_counter()
+    result4 = lap5_roll(grid, h2)
+    toc4 = time.perf_counter()
+    print(f'\nlap5_roll\nelapsed time {toc4 - tic4:.4f} s\n', result4)
+
+    tic5 = time.perf_counter()
+    result5 = sp.ndimage.laplace(grid, mode='wrap')
+    toc5 = time.perf_counter()
+    print(f'\nscipy.ndimage.laplace\nelapsed time {toc5 - tic5:.4f} s\n', result5)
 
 
 if __name__ == '__main__':
