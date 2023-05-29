@@ -7,6 +7,7 @@ lap5_loops            | 0.5555 s | 0.5794 s | 0.5660 s
 lap5_loops2           | 0.5516 s | 0.5396 s | 0.5209 s
 lap5_slices           | 0.0045 s | 0.0039 s | 0.0034 s
 lap5_roll             | 0.0064 s | 0.0056 s | 0.0051 s
+lap5_convolve         | 0.3192 s | 0.3120 s | 0.3136 s
 scipy.ndimage.laplace | 0.0737 s | 0.0693 s | 0.0659 s
 """
 
@@ -92,6 +93,16 @@ def lap5_roll(f, h2):
     return lap
 
 
+def lap5_convolve(f):
+    """
+    Five-point stencil to approximate the Laplacian. Kernel array defines the
+    stencil. Notice this gives periodic boundary conditions.
+    """
+    kernel = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
+    lap = sp.signal.convolve2d(f, kernel, mode='same', boundary='wrap')
+    return lap
+
+
 def main():
     """
     Run examples.
@@ -131,9 +142,14 @@ def main():
     print(f'\nlap5_roll\nelapsed time {toc4 - tic4:.4f} s\n', result4)
 
     tic5 = time.perf_counter()
-    result5 = sp.ndimage.laplace(grid, mode='wrap')
+    result5 = lap5_convolve(grid)
     toc5 = time.perf_counter()
-    print(f'\nscipy.ndimage.laplace\nelapsed time {toc5 - tic5:.4f} s\n', result5)
+    print(f'\nlap5_convolve\nelapsed time {toc5 - tic5:.4f} s\n', result5)
+
+    tic6 = time.perf_counter()
+    result6 = sp.ndimage.laplace(grid, mode='wrap')
+    toc6 = time.perf_counter()
+    print(f'\nscipy.ndimage.laplace\nelapsed time {toc6 - tic6:.4f} s\n', result6)
 
 
 if __name__ == '__main__':
