@@ -20,6 +20,50 @@ def lap5_loops(f, h2):
     return fnew
 
 
+def lap5_loops2(f, h2):
+    """
+    Five-point stencil to approximate the Laplacian using loops (version 2).
+    """
+    # create ghost nodes at borders
+    # 0 0 0 0 0
+    # 0 x x x 0
+    # 0 x x x 0
+    # 0 x x x 0
+    # 0 0 0 0 0
+    f = np.pad(f, 1)
+
+    # apply periodic boundary conditions
+    f[:, 0] = f[:, -2]  # left column
+    f[:, -1] = f[:, 1]  # right column
+    f[0, :] = f[-2, :]  # top row
+    f[-1, :] = f[1, :]  # bottom row
+
+    n = len(f)
+    fnew = np.zeros((n, n))
+
+    for i in range(1, n-1):
+        for j in range(1, n-1):
+            fnew[i, j] = (f[i-1, j] + f[i+1, j] + f[i, j-1] + f[i, j+1] - 4 * f[i, j]) / h2
+
+    return fnew[1:-1, 1:-1]
+
+
+def lap5_loops3(f, h2):
+    """
+    Five-point stencil to approximate the Laplacian using loops (version 3).
+    """
+    f = np.pad(f, 1, mode='wrap')
+
+    n = len(f)
+    fnew = np.zeros((n, n))
+
+    for i in range(1, n-1):
+        for j in range(1, n-1):
+            fnew[i, j] = (f[i-1, j] + f[i+1, j] + f[i, j-1] + f[i, j+1] - 4 * f[i, j]) / h2
+
+    return fnew[1:-1, 1:-1]
+
+
 def lap5_slices(f, h2):
     """
     Five-point stencil to approximate the Laplacian. The corresponding array
@@ -54,11 +98,14 @@ def main():
     """
 
     a = np.array(range(25)).reshape(5, 5)
+    # a = np.random.rand(5, 5)
     h = 1.0
     h2 = h * h
 
     print('a\n', a)
     print('\nlap5_loops\n', lap5_loops(a, h2))
+    print('\nlap5_loops2\n', lap5_loops2(a, h2))
+    print('\nlap5_loops3\n', lap5_loops3(a, h2))
     print('\nlap5_slices\n', lap5_slices(a, h2))
     print('\nlap5_roll\n', lap5_roll(a, h2))
     print('\nscipy.ndimage.laplace\n', sp.ndimage.laplace(a, mode='wrap'))
