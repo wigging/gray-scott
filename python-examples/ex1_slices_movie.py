@@ -1,7 +1,7 @@
 """
-Example of the Gray-Scott model using NumPy roll function. This is the same
-example as the numpy_roll.py example but saves an animation of the results to
-a movie.mp4 file.
+Example of solving the Gray-Scott model. This is the same example as the
+ex1_slices.py example but saves an animation of the results to a movie.mp4
+file.
 """
 
 import numpy as np
@@ -9,18 +9,23 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 
-def laplace(f, h2):
+def lap5(f, h2):
     """
-    Five-point stencil to approximate the Laplacian. Each corresponding roll
-    function is for each component of the stencil. Notice this gives periodic
-    boundary conditions.
+    Use a five-point stencil with periodic boundary conditions to approximate
+    the Laplacian. The corresponding array slices for each component of the
+    stencil are noted.
     """
-    left = np.roll(f, -1, axis=1)   # shift left for f(x - h, y)
-    right = np.roll(f, 1, axis=1)   # shift right for f(x + h, y)
-    down = np.roll(f, 1, axis=0)    # shift down for f(x, y - h)
-    up = np.roll(f, -1, axis=0)     # shift up for f(x, y + h)
-    lap = (left + right + down + up - 4 * f) / h2
-    return lap
+    f = np.pad(f, 1, mode='wrap')
+
+    left = f[1:-1, :-2]     # shift left for f(x - h, y)
+    right = f[1:-1, 2:]     # shift right for f(x + h, y)
+    down = f[2:, 1:-1]      # shift down for f(x, y - h)
+    up = f[:-2, 1:-1]       # shift up for f(x, y + h)
+    center = f[1:-1, 1:-1]  # center for f(x, y)
+
+    fxy = (left + right + down + up - 4 * center) / h2
+
+    return fxy
 
 
 def main():
@@ -34,6 +39,7 @@ def main():
 
     n = 128     # grid size n x n, try a value of 128 or 256
     h = 1       # grid spacing
+    h2 = h * h
 
     nt = 10000  # number of time steps
     dt = 1      # time step
@@ -57,9 +63,8 @@ def main():
         print(f'Running {n + 1:,}/{nt:,}', end='\r')
 
         UVV = U * V * V
-        h2 = h * h
-        U += (Du * laplace(U, h2) - UVV + F * (1 - U)) * dt
-        V += (Dv * laplace(V, h2) + UVV - V * (F + k)) * dt
+        U += (Du * lap5(U, h2) - UVV + F * (1 - U)) * dt
+        V += (Dv * lap5(V, h2) + UVV - V * (F + k)) * dt
 
         if n % 100 == 0:
             im = ax.imshow(U, interpolation='bicubic', cmap=plt.cm.jet, animated=True)
