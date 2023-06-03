@@ -62,8 +62,11 @@ def main():
         U += (Du * lap5(U, h2) - UVV + F * (1 - U)) * dt
         V += (Dv * lap5(V, h2) + UVV - V * (F + k)) * dt
 
-    # plot the final time step
-    plt.imshow(U, interpolation='bicubic', cmap=plt.cm.jet)
+    # plot the final time step and save figure to file
+    fig, ax = plt.subplots(tight_layout=True)
+    ax.imshow(U, interpolation='bicubic', cmap=plt.cm.jet)
+    ax.set_title(f'U species, F={F}, k={k}')
+    fig.savefig('../assets/fig1-python.png')
     plt.show()
 
 

@@ -1,6 +1,6 @@
 # Gray-Scott model
 
-This repository contains examples of the Gray-Scott model in various programming languages.
+This repository contains examples of implementing the Gray-Scott model in various programming languages.
 
 ## Governing equations
 
@@ -24,17 +24,25 @@ The resulting reaction-diffusion equations in dimensionless units are shown belo
 
 ## Examples
 
-Examples of solving the Gray-Scott model are provided for the following programming languages:
+Examples of solving the Gray-Scott model in Python, Swift, and Julia are available in this repository. See the comments in the code for more information about that particular example. The examples use model parameters and boundary conditions defined in the Pearson 1993 article. The Laplacian is calculated using a five-point stencil with periodic boundary conditions.
 
-- Python
-- Swift (in progress)
-- Julia
+### Julia
 
-See the comments in the examples for more information. The examples use model parameters and boundary conditions defined in the Pearson 1993 article.
+The `center.jl` is an example of assigning values at the center of a matrix. The `stencil.jl` demonstrates a two-dimensional five-point stencil. The Gray-Scott model is solved in `ex1_loops.jl`, `ex2_slices.jl`, and `ex3_views.jl` using loops, array slices, and views.
+
+### Python
+
+The `laplacian.py` contains examples of calculating the Laplacian using a five-point stencil and periodic boundary conditions. The Gray-Scott model is solved in `ex1_slices.py` and `ex1_slices_movie.py` saves an animation of the results.
+
+<img src="assets/fig1-python.png" width="49%"/> <img src="assets/fig2-python.png" width="49%"/>
+
+### Swift
+
+The Swift examples are available as Xcode projects and a playground. The `matrix` example demonstrates a two-dimensional `Matrix` struct that makes matrix calculations easier to work with in Swift. The `laplacian` example calculates the Laplacian of a matrix using a five-point stencil and periodic boundary conditions. The `ex1-loops` runs the Gray-Scott model and saves the results to a text file. This text file can be used with NumPy and Matplotlib to plot the results. The `ex1-loops-jeff` playground uses a `Lattice2d` struct for solving the Gray-Scott model and uses PythonKit to plot the results.
 
 ## Contributing
 
-If you would like to contribute an example to this respository, please create a folder for the example and submit a pull request. Literature such as articles, books, websites, etc. that were used to develop the example should be added to the References section.
+If you would like to contribute an example to this respository, please create a folder for the example and submit a pull request. Literature such as articles, books, websites, etc. that were used to develop the example should be added to the References section (see below).
 
 ## References
 
