@@ -2,7 +2,7 @@
 //  matrix.swift
 //  ex1-loops
 //
-//  Created by Gavin Wiggins on 5/27/23.
+//  Created by Gavin Wiggins on 6/3/23.
 //
 
 import Accelerate
@@ -101,5 +101,24 @@ extension Matrix: CustomStringConvertible {
             d += rowContents + "\n"
         }
         return d
+    }
+}
+
+extension Matrix {
+    public func writeToTxtFile(name: String, width: Int = 6, sig: Int = 1) {
+        var s = ""
+        for i in 0..<self.rows {
+            let rowContents = (0..<columns).map { String(format: "%-\(width).\(sig)f", self[i, $0]) }.joined()
+            s += rowContents + "\n"
+        }
+        
+        let dir = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).last!
+        let url = dir.appendingPathComponent("\(name).txt")
+        
+        do {
+            try s.write(toFile: url.path, atomically: true, encoding: .utf8)
+        } catch {
+            print(error)
+        }
     }
 }
