@@ -28,17 +28,17 @@ Examples of solving the Gray-Scott model in Python, Swift, and Julia are availab
 
 ### Julia
 
-The `center.jl` is an example of assigning values at the center of a matrix. The `stencil.jl` demonstrates a two-dimensional five-point stencil. The Gray-Scott model is solved in `ex1_loops.jl`, `ex2_slices.jl`, and `ex3_views.jl` using loops, array slices, and views.
+The `center.jl` is an example of assigning values at the center of a matrix. The `stencil.jl` demonstrates a two-dimensional five-point stencil. The Gray-Scott model is solved in `grayscott_loops.jl`, `grayscott_slices.jl`, and `grayscott_views.jl` using loops, array slices, and views.
 
 ### Python
 
-The `laplacian.py` contains examples of calculating the Laplacian using a five-point stencil and periodic boundary conditions. The Gray-Scott model is solved in `ex1_slices.py` and `ex1_slices_movie.py` saves an animation of the results.
+The `laplacian.py` contains examples of calculating the Laplacian using a five-point stencil and periodic boundary conditions. The Gray-Scott model is solved in `grayscott_slices.py` and `grayscott_movie.py` saves an animation of the results.
 
 <img src="assets/fig1-python.png" width="49%"/> <img src="assets/fig2-python.png" width="49%"/>
 
 ### Swift
 
-The Swift examples are available as Xcode projects and a playground. The `matrix` example demonstrates a two-dimensional `Matrix` struct that makes matrix calculations easier to work with in Swift. The `laplacian` example calculates the Laplacian of a matrix using a five-point stencil and periodic boundary conditions. The `ex1-loops` runs the Gray-Scott model and saves the results to a text file. This text file can be used with NumPy and Matplotlib to plot the results. The `ex1-loops-jeff` playground uses a `Lattice2d` struct for solving the Gray-Scott model and uses PythonKit to plot the results.
+The Swift examples are available as Xcode projects and a playground. The `matrix` project demonstrates a two-dimensional `Matrix` struct that makes matrix calculations easier to work with in Swift. The `laplacian` project calculates the Laplacian of a matrix using a five-point stencil and periodic boundary conditions. The `grayscott` project runs the Gray-Scott model and saves the results to a text file. This text file can be used with NumPy and Matplotlib to plot the results. The `grayscott-jeff` playground uses a `Lattice2d` struct for solving the Gray-Scott model and uses PythonKit to plot the results.
 
 ## Contributing
 

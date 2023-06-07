@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA8755A62A22E97400796982 /* ex1-loops */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ex1-loops"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8755A62A22E97400796982 /* grayscott */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = grayscott; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8755A92A22E97400796982 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA8755B02A22E98200796982 /* matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,7 +43,7 @@
 		AA87559D2A22E97400796982 = {
 			isa = PBXGroup;
 			children = (
-				AA8755A82A22E97400796982 /* ex1-loops */,
+				AA8755A82A22E97400796982 /* grayscott */,
 				AA8755A72A22E97400796982 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,26 +51,26 @@
 		AA8755A72A22E97400796982 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA8755A62A22E97400796982 /* ex1-loops */,
+				AA8755A62A22E97400796982 /* grayscott */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA8755A82A22E97400796982 /* ex1-loops */ = {
+		AA8755A82A22E97400796982 /* grayscott */ = {
 			isa = PBXGroup;
 			children = (
 				AA8755A92A22E97400796982 /* main.swift */,
 				AA8755B02A22E98200796982 /* matrix.swift */,
 			);
-			path = "ex1-loops";
+			path = grayscott;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA8755A52A22E97400796982 /* ex1-loops */ = {
+		AA8755A52A22E97400796982 /* grayscott */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA8755AD2A22E97400796982 /* Build configuration list for PBXNativeTarget "ex1-loops" */;
+			buildConfigurationList = AA8755AD2A22E97400796982 /* Build configuration list for PBXNativeTarget "grayscott" */;
 			buildPhases = (
 				AA8755A22A22E97400796982 /* Sources */,
 				AA8755A32A22E97400796982 /* Frameworks */,
@@ -80,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = "ex1-loops";
+			name = grayscott;
 			productName = "ex1-loops";
-			productReference = AA8755A62A22E97400796982 /* ex1-loops */;
+			productReference = AA8755A62A22E97400796982 /* grayscott */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA8755A12A22E97400796982 /* Build configuration list for PBXProject "ex1-loops" */;
+			buildConfigurationList = AA8755A12A22E97400796982 /* Build configuration list for PBXProject "grayscott" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA8755A52A22E97400796982 /* ex1-loops */,
+				AA8755A52A22E97400796982 /* grayscott */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +265,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA8755A12A22E97400796982 /* Build configuration list for PBXProject "ex1-loops" */ = {
+		AA8755A12A22E97400796982 /* Build configuration list for PBXProject "grayscott" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA8755AB2A22E97400796982 /* Debug */,
@@ -274,7 +274,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA8755AD2A22E97400796982 /* Build configuration list for PBXNativeTarget "ex1-loops" */ = {
+		AA8755AD2A22E97400796982 /* Build configuration list for PBXNativeTarget "grayscott" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA8755AE2A22E97400796982 /* Debug */,

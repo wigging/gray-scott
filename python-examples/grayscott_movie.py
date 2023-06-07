@@ -1,7 +1,7 @@
 """
 Example of solving the Gray-Scott model. This is the same example as the
-ex1_slices.py example but saves an animation of the results to a movie.mp4
-file.
+grayscott_slices.py example but saves an animation of the results to a
+movie.mp4 file.
 """
 
 import numpy as np
@@ -55,7 +55,7 @@ def main():
     V[low:high, low:high] = 0.25 + np.random.uniform(0, 0.1, (19, 19))
 
     # setup plot figure and initialize list to store plot images
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(tight_layout=True)
     ims = []
 
     # solve at each time step
@@ -75,7 +75,7 @@ def main():
     ani.save('movie.mp4')
 
     # plot the final time step
-    _, ax = plt.subplots()
+    _, ax = plt.subplots(tight_layout=True)
     ax.imshow(U, interpolation='bicubic', cmap=plt.cm.jet)
     plt.show()
 
