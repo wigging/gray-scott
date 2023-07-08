@@ -115,7 +115,6 @@ class GrayScott: ObservableObject {
             await MainActor.run {
                 step = nstep
             }
-            //print("Running \(nstep+1)/\(nt)", terminator: "\r")
             
             let UVV = U * V * V
             let lapU = lap5_convolve(U)
@@ -129,7 +128,7 @@ class GrayScott: ObservableObject {
         print("Max U is \(U.grid.max()!)")
         print("Done.")
         
-        // Generate grid of points for chart
+        // generate grid of points for chart
         let uMatrix = U
         await MainActor.run {
             grid.generateData(matrix: uMatrix)

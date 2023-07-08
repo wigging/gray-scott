@@ -21,8 +21,10 @@ struct ContentView: View {
                     yStart: .value("yStart", point.y),
                     yEnd: .value("yEnd", point.y + 1)
                 )
-                .foregroundStyle(point.color)
+                .foregroundStyle(by: .value("Weight", point.val))
             }
+            .chartXScale(domain: [0, 128])
+            .chartYScale(domain: [0, 128])
             .padding()
             
             Text("Running \(grayScott.step + 1) / \(grayScott.nt)")
