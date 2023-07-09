@@ -41,7 +41,7 @@ The `laplacian.py` contains examples of calculating the Laplacian using a five-p
 The Swift examples are available as Xcode projects and a playground. The `matrix` project demonstrates a two-dimensional `Matrix` struct that makes matrix calculations easier to work with in Swift. The `laplacian` project calculates the Laplacian of a matrix using a five-point stencil and periodic boundary conditions. The `grayscott` project runs the Gray-Scott model and saves the results to a text file. This text file can be used with NumPy and Matplotlib to plot the results. The `grayscott-jeff` playground uses a `Lattice2d` struct for solving the Gray-Scott model and uses PythonKit to plot the results. The `grayscott-macos` project is a macOS app that uses Swift Charts to plot the results.
 
 <p align="center">
-    <img src="assets/fig3-macos.png" width="49%"/>
+    <img src="assets/fig3-macos.png" width="80%"/>
 </p>
 
 ## Contributing
