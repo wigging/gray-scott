@@ -80,19 +80,17 @@ func lap5_convolve(_ m: Matrix) -> Matrix {
 
 class GrayScott: ObservableObject {
     
-    @Published var grid = Grid(rows: 128, columns: 128)
+    @Published var grid = Grid(rows: 256, columns: 256)
     @Published var step = 0
     
     let nt = 10000 // number of time steps
     
-    func runSimulation() async {
+    func runSimulation(F: Float, k: Float) async {
 
         let Du: Float = 0.2    // diffusion coefficient for U
         let Dv: Float = 0.1    // diffusion coefficient for V
-        let F: Float = 0.025   // feed rate
-        let k: Float = 0.056   // rate constant
         
-        let n = 128            // grid size n x n, try a value of 128 or 256
+        let n = 256            // grid size n x n, try a value of 128 or 256
         let dt: Float = 1      // time step
         
         // initialize matrices
