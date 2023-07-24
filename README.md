@@ -42,15 +42,15 @@ The Swift examples are available as Xcode projects and a playground. The `matrix
 
 The `grayscott-macos` project is a macOS app that uses Swift Charts to plot the results as shown in the figure below.
 
-<p align="center">
-    <img src="assets/fig3-macos.png" width="80%"/>
-</p>
+<div align="center">
+    <img src="assets/fig3-macos.png" width="60%"/>
+</div>
 
 The `GrayScottColormap` project is a macOS app that uses Core Graphics to plot the results as seen below. This uses the viridis colormap.
 
-<p align="center">
-    <img src="assets/fig4-colormap.png" width="80%"/>
-</p>
+<div align="center">
+    <img src="assets/fig4-colormap.png" width="90%"/>
+</div>
 
 ## Contributing
 
