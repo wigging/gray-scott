@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AADC91232A6ED667007E2CF7 /* GrayScottColormapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC91222A6ED667007E2CF7 /* GrayScottColormapApp.swift */; };
+		AADC91252A6ED667007E2CF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC91242A6ED667007E2CF7 /* ContentView.swift */; };
+		AADC91272A6ED668007E2CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADC91262A6ED668007E2CF7 /* Assets.xcassets */; };
+		AADC912A2A6ED668007E2CF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADC91292A6ED668007E2CF7 /* Preview Assets.xcassets */; };
+		AADC91322A6ED6C6007E2CF7 /* ColormapImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC91312A6ED6C6007E2CF7 /* ColormapImage.swift */; };
+		AADC91342A6ED6F9007E2CF7 /* GrayImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC91332A6ED6F9007E2CF7 /* GrayImage.swift */; };
+		AADC91362A6ED74E007E2CF7 /* ViridisImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC91352A6ED74E007E2CF7 /* ViridisImage.swift */; };
+		AAF1C4B42A6EF80E0082D993 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1C4B32A6EF80E0082D993 /* Matrix.swift */; };
+		AAF1C4B62A6EF8610082D993 /* GrayScott.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1C4B52A6EF8610082D993 /* GrayScott.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AADC911F2A6ED667007E2CF7 /* GrayScottColormap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrayScottColormap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADC91222A6ED667007E2CF7 /* GrayScottColormapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayScottColormapApp.swift; sourceTree = "<group>"; };
+		AADC91242A6ED667007E2CF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AADC91262A6ED668007E2CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AADC91292A6ED668007E2CF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AADC912B2A6ED668007E2CF7 /* GrayScottColormap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrayScottColormap.entitlements; sourceTree = "<group>"; };
+		AADC91312A6ED6C6007E2CF7 /* ColormapImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColormapImage.swift; sourceTree = "<group>"; };
+		AADC91332A6ED6F9007E2CF7 /* GrayImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayImage.swift; sourceTree = "<group>"; };
+		AADC91352A6ED74E007E2CF7 /* ViridisImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViridisImage.swift; sourceTree = "<group>"; };
+		AAF1C4B32A6EF80E0082D993 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		AAF1C4B52A6EF8610082D993 /* GrayScott.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayScott.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AADC911C2A6ED667007E2CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AADC91162A6ED667007E2CF7 = {
+			isa = PBXGroup;
+			children = (
+				AADC91212A6ED667007E2CF7 /* GrayScottColormap */,
+				AADC91202A6ED667007E2CF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AADC91202A6ED667007E2CF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AADC911F2A6ED667007E2CF7 /* GrayScottColormap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AADC91212A6ED667007E2CF7 /* GrayScottColormap */ = {
+			isa = PBXGroup;
+			children = (
+				AADC91222A6ED667007E2CF7 /* GrayScottColormapApp.swift */,
+				AADC91242A6ED667007E2CF7 /* ContentView.swift */,
+				AAF1C4B32A6EF80E0082D993 /* Matrix.swift */,
+				AAF1C4B52A6EF8610082D993 /* GrayScott.swift */,
+				AADC91312A6ED6C6007E2CF7 /* ColormapImage.swift */,
+				AADC91332A6ED6F9007E2CF7 /* GrayImage.swift */,
+				AADC91352A6ED74E007E2CF7 /* ViridisImage.swift */,
+				AADC91262A6ED668007E2CF7 /* Assets.xcassets */,
+				AADC912B2A6ED668007E2CF7 /* GrayScottColormap.entitlements */,
+				AADC91282A6ED668007E2CF7 /* Preview Content */,
+			);
+			path = GrayScottColormap;
+			sourceTree = "<group>";
+		};
+		AADC91282A6ED668007E2CF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AADC91292A6ED668007E2CF7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AADC911E2A6ED667007E2CF7 /* GrayScottColormap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADC912E2A6ED668007E2CF7 /* Build configuration list for PBXNativeTarget "GrayScottColormap" */;
+			buildPhases = (
+				AADC911B2A6ED667007E2CF7 /* Sources */,
+				AADC911C2A6ED667007E2CF7 /* Frameworks */,
+				AADC911D2A6ED667007E2CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrayScottColormap;
+			productName = GrayScottColormap;
+			productReference = AADC911F2A6ED667007E2CF7 /* GrayScottColormap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AADC91172A6ED667007E2CF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AADC911E2A6ED667007E2CF7 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AADC911A2A6ED667007E2CF7 /* Build configuration list for PBXProject "GrayScottColormap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AADC91162A6ED667007E2CF7;
+			productRefGroup = AADC91202A6ED667007E2CF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AADC911E2A6ED667007E2CF7 /* GrayScottColormap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AADC911D2A6ED667007E2CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADC912A2A6ED668007E2CF7 /* Preview Assets.xcassets in Resources */,
+				AADC91272A6ED668007E2CF7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AADC911B2A6ED667007E2CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADC91362A6ED74E007E2CF7 /* ViridisImage.swift in Sources */,
+				AADC91342A6ED6F9007E2CF7 /* GrayImage.swift in Sources */,
+				AAF1C4B42A6EF80E0082D993 /* Matrix.swift in Sources */,
+				AAF1C4B62A6EF8610082D993 /* GrayScott.swift in Sources */,
+				AADC91252A6ED667007E2CF7 /* ContentView.swift in Sources */,
+				AADC91232A6ED667007E2CF7 /* GrayScottColormapApp.swift in Sources */,
+				AADC91322A6ED6C6007E2CF7 /* ColormapImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AADC912C2A6ED668007E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AADC912D2A6ED668007E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AADC912F2A6ED668007E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GrayScottColormap/GrayScottColormap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GrayScottColormap/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.GrayScottColormap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AADC91302A6ED668007E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GrayScottColormap/GrayScottColormap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GrayScottColormap/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.GrayScottColormap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AADC911A2A6ED667007E2CF7 /* Build configuration list for PBXProject "GrayScottColormap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADC912C2A6ED668007E2CF7 /* Debug */,
+				AADC912D2A6ED668007E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADC912E2A6ED668007E2CF7 /* Build configuration list for PBXNativeTarget "GrayScottColormap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADC912F2A6ED668007E2CF7 /* Debug */,
+				AADC91302A6ED668007E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AADC91172A6ED667007E2CF7 /* Project object */;
+}
