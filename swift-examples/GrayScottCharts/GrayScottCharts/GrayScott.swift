@@ -1,8 +1,8 @@
 //
 //  GrayScott.swift
-//  grayscott-macos
+//  GrayScottCharts
 //
-//  Created by Gavin Wiggins on 6/12/23.
+//  Created by Gavin Wiggins on 7/24/23.
 //
 
 import Accelerate

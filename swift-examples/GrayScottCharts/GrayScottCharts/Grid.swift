@@ -1,11 +1,10 @@
 //
 //  Grid.swift
-//  grayscott-macos
+//  GrayScottCharts
 //
-//  Created by Gavin Wiggins on 6/13/23.
+//  Created by Gavin Wiggins on 7/24/23.
 //
 
-import Foundation
 import SwiftUI
 
 struct Point: Hashable, Identifiable {
