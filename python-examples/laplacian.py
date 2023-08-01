@@ -1,12 +1,14 @@
 """
-Examples of calculating the Laplacian in two dimensions using periodic
-boundary conditions.
+Examples of calculating the Laplacian in two dimensions using a five-point
+stencil and periodic boundary conditions.
 
-Elapsed time results for n=512 are given below for three runs.
+Elapsed time results for n=512 are given below for three runs. The results are
+from a 2019 MacBook Pro, 2.6 GHz 6-core Intel i7 CPU with 32 GB of RAM.
 lap5_loops            | 0.5555 s | 0.5794 s | 0.5660 s
 lap5_loops2           | 0.5516 s | 0.5396 s | 0.5209 s
 lap5_slices           | 0.0045 s | 0.0039 s | 0.0034 s
 lap5_roll             | 0.0064 s | 0.0056 s | 0.0051 s
+lap5_shift            | 0.0026 s | 0.0025 s | 0.0025 s
 lap5_convolve         | 0.3192 s | 0.3120 s | 0.3136 s
 scipy.ndimage.laplace | 0.0737 s | 0.0693 s | 0.0659 s
 """
@@ -89,7 +91,24 @@ def lap5_roll(f, h2):
     right = np.roll(f, 1, axis=1)   # shift right for f(x + h, y)
     down = np.roll(f, 1, axis=0)    # shift down for f(x, y - h)
     up = np.roll(f, -1, axis=0)     # shift up for f(x, y + h)
+
     lap = (left + right + down + up - 4 * f) / h2
+
+    return lap
+
+
+def lap5_shift(f, h2):
+    """
+    Five-point stencil to approximate the Laplacian by shifting (slice) the
+    array then adding a column or row.
+    """
+    left = np.c_[f[:, 1:], f[:, 0]]      # shift left for f(x - h, y)
+    right = np.c_[f[:, -1], f[:, :-1]]   # shift right for f(x + h, y)
+    down = np.r_[[f[-1, :]], f[:-1, :]]  # shift down for f(x, y - h)
+    up = np.r_[f[1:, :], [f[0, :]]]      # shift up for f(x, y + h)
+
+    lap = (left + right + down + up - 4 * f) / h2
+
     return lap
 
 
@@ -109,11 +128,10 @@ def main():
     """
 
     # grid size as n x n
-    n = 5
+    n = 512
 
     # create square grid
     grid = np.array(range(n * n)).reshape(n, n)
-    # grid = np.random.rand(5, 5)
 
     # step in space where h is Δx and Δy
     h = 1.0
@@ -142,14 +160,19 @@ def main():
     print(f'\nlap5_roll\nelapsed time {toc4 - tic4:.4f} s\n', result4)
 
     tic5 = time.perf_counter()
-    result5 = lap5_convolve(grid)
+    result5 = lap5_shift(grid, h2)
     toc5 = time.perf_counter()
-    print(f'\nlap5_convolve\nelapsed time {toc5 - tic5:.4f} s\n', result5)
+    print(f'\nlap5_shift\nelapsed time {toc5 - tic5:.4f} s\n', result5)
 
     tic6 = time.perf_counter()
-    result6 = sp.ndimage.laplace(grid, mode='wrap')
+    result6 = lap5_convolve(grid)
     toc6 = time.perf_counter()
-    print(f'\nscipy.ndimage.laplace\nelapsed time {toc6 - tic6:.4f} s\n', result6)
+    print(f'\nlap5_convolve\nelapsed time {toc6 - tic6:.4f} s\n', result6)
+
+    tic7 = time.perf_counter()
+    result7 = sp.ndimage.laplace(grid, mode='wrap')
+    toc7 = time.perf_counter()
+    print(f'\nscipy.ndimage.laplace\nelapsed time {toc7 - tic7:.4f} s\n', result7)
 
 
 if __name__ == '__main__':

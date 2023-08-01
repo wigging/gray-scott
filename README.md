@@ -36,6 +36,18 @@ The `laplacian.py` contains examples of calculating the Laplacian using a five-p
 
 <img src="assets/fig1-python.png" width="49%"/> <img src="assets/fig2-python.png" width="49%"/>
 
+The table below compares the elapsed times for each Laplacian function in `laplacian.py` for a 512x512 array. The results are from a 2019 MacBook Pro running a 2.6 GHz 6-core Intel i7 CPU with 32 GB of RAM.
+
+| Function              | Run 1    | Run 2    | Run 3    |
+| --------------------- | -------- | -------- | -------- |
+| lap5_loops            | 0.5555 s | 0.5794 s | 0.5660 s |
+| lap5_loops2           | 0.5516 s | 0.5396 s | 0.5209 s |
+| lap5_slices           | 0.0045 s | 0.0039 s | 0.0034 s |
+| lap5_roll             | 0.0064 s | 0.0056 s | 0.0051 s |
+| lap5_shift            | 0.0026 s | 0.0025 s | 0.0025 s |
+| lap5_convolve         | 0.3192 s | 0.3120 s | 0.3136 s |
+| scipy.ndimage.laplace | 0.0737 s | 0.0693 s | 0.0659 s |
+
 ### Swift
 
 The Swift examples are available as Xcode projects and a playground in the `swift-examples` folder. The `matrix` project demonstrates a two-dimensional `Matrix` struct that makes matrix calculations easier to work with in Swift. The `laplacian` project calculates the Laplacian of a matrix using a five-point stencil and periodic boundary conditions. The `grayscott` project runs the Gray-Scott model and saves the results to a text file. This text file can be used with NumPy and Matplotlib to plot the results. The `grayscott-jeff` playground uses a `Lattice2d` struct for solving the Gray-Scott model and uses PythonKit to plot the results.
