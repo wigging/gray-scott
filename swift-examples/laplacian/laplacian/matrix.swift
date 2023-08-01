@@ -11,84 +11,105 @@ public struct Matrix {
     
     let rows: Int
     let columns: Int
-    var grid: [Float]
+    var values: [Float]
         
     public init(rows: Int, columns: Int, fill: Float = 0) {
         self.rows = rows
         self.columns = columns
-        self.grid = Array(repeating: fill, count: rows * columns)
+        self.values = Array(repeating: fill, count: rows * columns)
     }
         
     public init(rows: Int, columns: Int, values: [Float]) {
         self.rows = rows
         self.columns = columns
-        self.grid = values
+        self.values = values
     }
     
     public init(_ array2d: [[Float]]) {
         self.rows = array2d.count
         self.columns = array2d[0].count
-        self.grid = array2d.flatMap { $0 }
+        self.values = array2d.flatMap { $0 }
     }
     
     public subscript(row: Int, column: Int) -> Float {
-        get { return grid[(row * columns) + column] }
-        set { grid[(row * columns) + column] = newValue }
+        get { return values[(row * columns) + column] }
+        set { values[(row * columns) + column] = newValue }
+    }
+    
+    public subscript(rows: Range<Int>, columns: Range<Int>) -> Matrix {
+        get {
+            let nrows = rows.upperBound - rows.lowerBound
+            let ncols = columns.upperBound - columns.lowerBound
+            var c: [Float] = Array(repeating: 0, count: nrows * ncols)
+            
+            let m = vDSP_Length(ncols)         // number of columns to copy
+            let n = vDSP_Length(nrows)         // number of rows to copy
+            let ta = vDSP_Length(self.columns) // number of columns in a
+            let tc = vDSP_Length(ncols)        // number of columns in c
+            
+            let idx = (rows.lowerBound * self.columns) + columns.lowerBound
+            let a = Array(self.values[idx...])
+            
+            vDSP_mmov(a, &c, m, n, ta, tc)
+            
+            let mat = Matrix(rows: nrows, columns: ncols, values: c)
+            return mat
+        }
     }
     
     static public func * (lhs: Matrix, rhs: Matrix) -> Matrix {
-        let v = vDSP.multiply(lhs.grid, rhs.grid)
+        let v = vDSP.multiply(lhs.values, rhs.values)
         let m = Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
         return m
     }
     
     static public func * (lhs: Float, rhs: Matrix) -> Matrix {
-        let v = vDSP.multiply(lhs, rhs.grid)
+        let v = vDSP.multiply(lhs, rhs.values)
         let m = Matrix(rows: rhs.rows, columns: rhs.columns, values: v)
         return m
     }
     
     static public func * (lhs: Matrix, rhs: Float) -> Matrix {
-        let v = vDSP.multiply(rhs, lhs.grid)
+        let v = vDSP.multiply(rhs, lhs.values)
         let m = Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
         return m
     }
     
     static public func / (lhs: Matrix, rhs: Float) -> Matrix {
-        let v = vDSP.divide(lhs.grid, rhs)
+        let v = vDSP.divide(lhs.values, rhs)
         let m = Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
         return m
     }
     
     static public func + (lhs: Matrix, rhs: Matrix) -> Matrix {
-        let v = vDSP.add(lhs.grid, rhs.grid)
+        let v = vDSP.add(lhs.values, rhs.values)
         return Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
     }
 
     static public func + (lhs: Float, rhs: Matrix) -> Matrix {
-        let v = vDSP.add(lhs, rhs.grid)
+        let v = vDSP.add(lhs, rhs.values)
         return Matrix(rows: rhs.rows, columns: rhs.columns, values: v)
     }
     
     static public func + (lhs: Matrix, rhs: Float) -> Matrix {
-        let v = vDSP.add(rhs, lhs.grid)
+        let v = vDSP.add(rhs, lhs.values)
         return Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
     }
     
     static public func - (lhs: Matrix, rhs: Matrix) -> Matrix {
-        let v = vDSP.subtract(lhs.grid, rhs.grid)
+        let v = vDSP.subtract(lhs.values, rhs.values)
         return Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
     }
     
     static public func - (lhs: Float, rhs: Matrix) -> Matrix {
-        let a: [Float] = Array(repeating: lhs, count: rhs.grid.count)
-        let v = vDSP.subtract(a, rhs.grid)
+        let a: [Float] = Array(repeating: lhs, count: rhs.values.count)
+        let v = vDSP.subtract(a, rhs.values)
         return Matrix(rows: rhs.rows, columns: rhs.columns, values: v)
     }
     
     static public func - (lhs: Matrix, rhs: Float) -> Matrix {
-        let a: [Float] = Array(repeating: rhs, count: lhs.grid.count)
-        let v = vDSP.subtract(lhs.grid, a)
+        let a: [Float] = Array(repeating: rhs, count: lhs.values.count)
+        let v = vDSP.subtract(lhs.values, a)
         return Matrix(rows: lhs.rows, columns: lhs.columns, values: v)
     }
 }
