@@ -64,6 +64,12 @@ The `GrayScottColormap` project is a macOS app that uses Core Graphics to plot t
     <img src="assets/fig4-colormap.png" width="90%"/>
 </div>
 
+The `Gray-Scott Torus` project is a MacOS app using Metal to explore various values of F and k with periodic boundary conditions, displaying the results in live time on either a plane or a torus projection.
+
+<div align="center">
+    <img src="assets/fig5-torus.jpg" width="60%"/>
+</div>
+
 ## Contributing
 
 If you would like to contribute an example to this respository, please create a folder for the example and submit a pull request. Literature such as articles, books, websites, etc. that were used to develop the example should be added to the References section (see below).
