@@ -328,7 +328,7 @@ class ViewController: NSViewController, MTKViewDelegate {
 		
 		// This runs slow in debug mode, but very fast in run builds
 		
-		let α = π / Float(wing)
+		let α = Float.pi / Float(wing)
 		let side = 2 * wing
 		
 		//___________________________________________________ vertices
