@@ -27,6 +27,7 @@
 import simd
 
 typealias float4 = SIMD4<Float>
+typealias float2 = SIMD2<Float>
 
 extension matrix_float4x4 {
 	init(translationX x: Float, y: Float, z: Float) {
