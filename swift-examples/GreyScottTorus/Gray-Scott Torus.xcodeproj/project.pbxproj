@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F0D28C01E8A439100B5FF9B /* CustomSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D28BF1E8A439100B5FF9B /* CustomSliderCell.swift */; };
+		1FB9CC691E8C4A6100CB426D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CC681E8C4A6100CB426D /* Shaders.metal */; };
+		1FD1CF661E77906800C1AF3F /* MatrixMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1CF651E77906800C1AF3F /* MatrixMath.swift */; };
+		1FD21E241E70CB45001BBF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD21E231E70CB45001BBF05 /* AppDelegate.swift */; };
+		1FD21E261E70CB45001BBF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD21E251E70CB45001BBF05 /* Assets.xcassets */; };
+		1FD21E291E70CB45001BBF05 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD21E271E70CB45001BBF05 /* MainMenu.xib */; };
+		1FD21E311E70CB70001BBF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD21E301E70CB70001BBF05 /* ViewController.swift */; };
+		1FD21E331E70D55C001BBF05 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD21E321E70D55C001BBF05 /* Math.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F0D28BF1E8A439100B5FF9B /* CustomSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderCell.swift; sourceTree = "<group>"; };
+		1FB9CC681E8C4A6100CB426D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		1FD1CF651E77906800C1AF3F /* MatrixMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixMath.swift; sourceTree = "<group>"; };
+		1FD21E201E70CB45001BBF05 /* Gray-Scott Torus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gray-Scott Torus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD21E231E70CB45001BBF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FD21E251E70CB45001BBF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FD21E281E70CB45001BBF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1FD21E2A1E70CB45001BBF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD21E301E70CB70001BBF05 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FD21E321E70D55C001BBF05 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FD21E1D1E70CB45001BBF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FD21E171E70CB45001BBF05 = {
+			isa = PBXGroup;
+			children = (
+				1FD21E221E70CB45001BBF05 /* Gray-Scott Torus */,
+				1FD21E211E70CB45001BBF05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FD21E211E70CB45001BBF05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FD21E201E70CB45001BBF05 /* Gray-Scott Torus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD21E221E70CB45001BBF05 /* Gray-Scott Torus */ = {
+			isa = PBXGroup;
+			children = (
+				1FD21E231E70CB45001BBF05 /* AppDelegate.swift */,
+				1FD21E251E70CB45001BBF05 /* Assets.xcassets */,
+				1FD21E271E70CB45001BBF05 /* MainMenu.xib */,
+				1FD21E2A1E70CB45001BBF05 /* Info.plist */,
+				1FD21E301E70CB70001BBF05 /* ViewController.swift */,
+				1FD1CF651E77906800C1AF3F /* MatrixMath.swift */,
+				1FD21E321E70D55C001BBF05 /* Math.swift */,
+				1F0D28BF1E8A439100B5FF9B /* CustomSliderCell.swift */,
+				1FB9CC681E8C4A6100CB426D /* Shaders.metal */,
+			);
+			path = "Gray-Scott Torus";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FD21E1F1E70CB45001BBF05 /* Gray-Scott Torus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD21E2D1E70CB45001BBF05 /* Build configuration list for PBXNativeTarget "Gray-Scott Torus" */;
+			buildPhases = (
+				1FD21E1C1E70CB45001BBF05 /* Sources */,
+				1FD21E1D1E70CB45001BBF05 /* Frameworks */,
+				1FD21E1E1E70CB45001BBF05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gray-Scott Torus";
+			productName = "Gray-Scott Torus";
+			productReference = 1FD21E201E70CB45001BBF05 /* Gray-Scott Torus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FD21E181E70CB45001BBF05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 1500;
+				ORGANIZATIONNAME = "HyperJeff, Inc";
+				TargetAttributes = {
+					1FD21E1F1E70CB45001BBF05 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VC3N99VQDC;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1FD21E1B1E70CB45001BBF05 /* Build configuration list for PBXProject "Gray-Scott Torus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FD21E171E70CB45001BBF05;
+			productRefGroup = 1FD21E211E70CB45001BBF05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FD21E1F1E70CB45001BBF05 /* Gray-Scott Torus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FD21E1E1E70CB45001BBF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD21E261E70CB45001BBF05 /* Assets.xcassets in Resources */,
+				1FD21E291E70CB45001BBF05 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FD21E1C1E70CB45001BBF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB9CC691E8C4A6100CB426D /* Shaders.metal in Sources */,
+				1FD21E311E70CB70001BBF05 /* ViewController.swift in Sources */,
+				1F0D28C01E8A439100B5FF9B /* CustomSliderCell.swift in Sources */,
+				1FD21E241E70CB45001BBF05 /* AppDelegate.swift in Sources */,
+				1FD1CF661E77906800C1AF3F /* MatrixMath.swift in Sources */,
+				1FD21E331E70D55C001BBF05 /* Math.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FD21E271E70CB45001BBF05 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD21E281E70CB45001BBF05 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FD21E2B1E70CB45001BBF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1FD21E2C1E70CB45001BBF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1FD21E2E1E70CB45001BBF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = VC3N99VQDC;
+				INFOPLIST_FILE = "Gray-Scott Torus/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyperjeff.Gray-Scott-Torus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FD21E2F1E70CB45001BBF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = VC3N99VQDC;
+				INFOPLIST_FILE = "Gray-Scott Torus/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyperjeff.Gray-Scott-Torus";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FD21E1B1E70CB45001BBF05 /* Build configuration list for PBXProject "Gray-Scott Torus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD21E2B1E70CB45001BBF05 /* Debug */,
+				1FD21E2C1E70CB45001BBF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD21E2D1E70CB45001BBF05 /* Build configuration list for PBXNativeTarget "Gray-Scott Torus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD21E2E1E70CB45001BBF05 /* Debug */,
+				1FD21E2F1E70CB45001BBF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FD21E181E70CB45001BBF05 /* Project object */;
+}
