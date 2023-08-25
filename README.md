@@ -78,9 +78,12 @@ If you would like to contribute an example to this respository, please create a 
 
 References about the Gray-Scott model and numerical techniques for solving it are provided below:
 
-- John E. Pearson. **Complex Patterns in a Simple System**. Science, vol. 261, issue 5118, pp. 189-192, 1993. https://doi.org/10.1126/science.261.5118.189
-- Abelson, Adams, Coore, Hanson, Nagpal, Sussman. **Gray Scott Model of Reaction Diffusion**. Accessed 2023. https://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/
-- Katharina Käfer and Mirjam Schulz. **Gray-Scott Model of a Reaction-Diffusion System**. Accessed 2023. https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/
-- Wikipedia. **Five-point stencil**. Accessed 2023. https://en.wikipedia.org/wiki/Five-point_stencil
-- Danny Cubic Root. **How to obtain the 9-point Laplacian formula?**. Mathematics Stack Exchange, 2018. https://math.stackexchange.com/q/2916234
-- Wikipedia. **Discrete Laplace operator**. Accessed 2023. https://en.wikipedia.org/wiki/Discrete_Laplace_operator
+1. J.E. Pearson, "Complex Patterns in a Simple System," Science, vol. 261, no. 5118, pp. 189–192, 1993, doi: [10.1126/science.261.5118.189](https://doi.org/10.1126/science.261.5118.189).
+2. Abelson, Adams, Coore, Hanson, Nagpal, Sussman, "Gray Scott Model of Reaction Diffusion," Accessed: Aug. 24, 2023. [Online]. Available: https://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/
+3. Katharina Kafer and Mirjam Schulz, "Gray-Scott Model of a Reaction-Diffusion System," Accessed: Aug. 24, 2023. [Online]. Available: https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/
+4. "Five-point stencil," Wikipedia. Jan. 31, 2023. Accessed: Aug. 24, 2023. [Online]. Available: https://en.wikipedia.org/wiki/Five-point_stencil.
+5. D. C. Root, "How to obtain the 9-point Laplacian formula?," Mathematics Stack Exchange, Sep. 15, 2018. Accessed: Aug. 24, 2023. [Online]. Available: https://math.stackexchange.com/q/2916234
+6. "Discrete Laplace operator," Wikipedia. Jul. 23, 2023. Accessed: Aug. 24, 2023. [Online]. Available: https://en.wikipedia.org/wiki/Discrete_Laplace_operator
+7. R. P. Munafo, "Pearson’s Classification (Extended) of Gray-Scott System Parameter Values at MROB," Mar. 18, 2022. Accessed: Aug. 24, 2023. [Online]. Available: http://www.mrob.com/pub/comp/xmorphia/pearson-classes.html
+8. K. Sims, "Reaction-Diffusion Tutorial," 2016. Accessed: Aug. 24, 2023. [Online]. Available: http://www.karlsims.com/rd.html
+9. K. Sims, "Reaction-Diffusion Explorer Tool," 2016. Accessed: Aug. 24, 2023. [Online]. Available: http://karlsims.com/rdtool.html
