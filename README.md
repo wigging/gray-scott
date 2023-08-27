@@ -78,7 +78,7 @@ If you would like to contribute an example to this respository, please create a 
 
 References about the Gray-Scott model and numerical techniques for solving it are provided below:
 
-1. J.E. Pearson, "Complex Patterns in a Simple System," Science, vol. 261, no. 5118, pp. 189–192, 1993, doi: [10.1126/science.261.5118.189](https://doi.org/10.1126/science.261.5118.189).
+1. John E. Pearson, "Complex Patterns in a Simple System," Science, vol. 261, no. 5118, pp. 189–192, 1993, doi: [10.1126/science.261.5118.189](https://doi.org/10.1126/science.261.5118.189).
 2. Abelson, Adams, Coore, Hanson, Nagpal, Sussman, "Gray Scott Model of Reaction Diffusion," Accessed: Aug. 24, 2023. [Online]. Available: https://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/
 3. Katharina Kafer and Mirjam Schulz, "Gray-Scott Model of a Reaction-Diffusion System," Accessed: Aug. 24, 2023. [Online]. Available: https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/
 4. "Five-point stencil," Wikipedia. Jan. 31, 2023. Accessed: Aug. 24, 2023. [Online]. Available: https://en.wikipedia.org/wiki/Five-point_stencil.
