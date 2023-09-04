@@ -70,6 +70,12 @@ The `Gray-Scott Torus` project is a MacOS app using Metal to explore various val
     <img src="assets/fig5-torus.jpg" width="60%"/>
 </div>
 
+The `GrayScottMetal` project is a macOS app the uses compute (kernel) shaders in Metal to perform the Gray-Scott calculations and animate the results.
+
+<div align="center">
+    <img src="assets/fig6-metal.png" width="40%"/>
+</div>
+
 ## Contributing
 
 If you would like to contribute an example to this respository, please create a folder for the example and submit a pull request. Literature such as articles, books, websites, etc. that were used to develop the example should be added to the References section (see below).
